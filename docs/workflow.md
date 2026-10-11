@@ -1,0 +1,9 @@
+# Workflow and research
+Read personal local skills at /Users/intrepion/.agents/skills: grill-with-docs, implement, grilling, domain-modeling, tdd, code-review, plus domain context/ADR formats and TDD tests/mocking guides. No applicable AGENTS.md was found in the Codex task tree. Checked official Matt Pocock skill pages:
+- https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md
+- https://github.com/mattpocock/skills/blob/main/skills/engineering/implement/SKILL.md
+Local Grill with Docs delegates to grilling/domain-modeling; current official version expresses the same dependency using Skill calls. Followed local workflow through filesystem reads because no Skill invocation tool is exposed.
+
+Adaptations: user explicitly delegated recommended choices and no design questions, so settled frontier decisions in docs/spec.md rather than waiting for interview confirmations. Test seams selected under that authorization: Run commands, seeded terrain, defensive save boundary. Initial paused-run test was red (missing game module) then green; subsequent regression tests followed implementation, so this is targeted initial TDD plus broader behavior regression, not a claim of full strict TDD. Independent standards and specification reviewers use the initial documentation commit as their fixed point. Issue-tracker instructions point to docs/spec.md.
+
+Research: creator Chris Pirih's https://ski.ihoc.net/ confirms origins, scrolling skier/tree motif and snow monster. https://en.wikipedia.org/wiki/SkiFree provides secondary detail on keyboard/mouse steering, slalom/tree slalom/freestyle, jump ramps, obstacle crashes and fast mode. Our finite refuge runs, creature/art, forgiving recovery, and chase warning are original design choices, not asserted original rules. No source artwork or executable was used.

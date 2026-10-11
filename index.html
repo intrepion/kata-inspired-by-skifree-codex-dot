@@ -1,1 +1,97 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#102c38"><title>Rime & Run — Juniper Basin</title></head><body><div id="app"><header><a class="brand" href="#">R<span>↟</span>R</a><div><b>JUNIPER BASIN</b><small>THE RIDGE IS YOURS.</small></div><nav><button id="mute" aria-label="Toggle sound">Sound off</button><button id="motion">Motion full</button><button id="pause" hidden>Pause</button></nav></header><main><canvas tabindex="-1" id="slope" aria-label="Downhill skiing slope"></canvas><div class="hud" hidden><div><small>SCORE</small><strong id="score">0</strong></div><div><small id="goal-label">DISTANCE</small><strong id="goal">0 m</strong></div><div><small>SPEED</small><strong id="speed">0</strong></div><div class="run-progress"><i id="progress"></i></div></div><div id="callout" aria-live="polite"></div><div id="chase" hidden><b>RIMEHORN</b><span>220 m behind</span><meter min="0" max="300" value="220"></meter></div><section id="panel"><div class="eyebrow">A LITTLE WILD. ALL DOWNHILL.</div><h1>Rime <em>&</em> Run<span>↘</span></h1><p class="intro">Carve your own way through the pines.<br>Catch some air. Beat the mountain home.</p><div class="modes"><button data-mode="slalom" class="selected"><span>01 / RACE</span><b>Pennant pass</b><small>12 gates. One perfect line.</small></button><button data-mode="freestyle"><span>02 / STYLE</span><b>Cloud kicker</b><small>Big air. Bigger combinations.</small></button><button data-mode="free"><span>03 / ROAM</span><b>Long way home</b><small>Open snow. A wild finish.</small></button></div><p id="mode-info">Thread the pennants. A missed gate costs 5 seconds. Reach the refuge fast.</p><button id="start" class="primary">DROP IN <span>↘</span></button><div class="best" id="best">PERSONAL BEST — 0</div><details><summary>Field guide & controls</summary><p>← → / A D carve · ↓ / S brake · ↑ / W / Shift tuck<br>Space hops; tap again in air to spin (2 max). Release steering before landing. Trees are too tall to clear; jump rocks.<br>Drag the snow to steer. Touch buttons brake, tuck and hop.<br>P / Esc pauses. Crashes grant a 2.5 second shield.<br>Rimehorn wakes near the finish: tuck above 105 to pull away. Your shield protects the chase gap. Reach the refuge before it catches you!</p></details></section><section id="result" hidden></section><div id="touch" hidden><button data-hold="brake">BRAKE</button><button data-hold="tuck">TUCK ↑</button><button id="hop">HOP / SPIN</button></div><aside class="slope-note">NORTH FACE / 46° N <span>ORIGINAL ALPINE ARCADE</span></aside></main><footer><span>FRESH TRACKS. NO LIFT TICKET.</span><span id="footer-help">Keyboard or touch • Built for a quick escape</span></footer></div><script type="module" src="/src/main.ts"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#102c38" />
+    <title>Rime & Run — Juniper Basin</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <a class="brand" href="#">R<span>↟</span>R</a>
+        <div><b>JUNIPER BASIN</b><small>THE RIDGE IS YOURS.</small></div>
+        <nav>
+          <button id="mute" aria-label="Toggle sound">Sound off</button
+          ><button id="motion">Motion full</button
+          ><button id="pause" hidden>Pause</button>
+        </nav>
+      </header>
+      <main>
+        <canvas
+          tabindex="-1"
+          id="slope"
+          aria-label="Downhill skiing slope"
+        ></canvas>
+        <div class="hud" hidden>
+          <div><small>SCORE</small><strong id="score">0</strong></div>
+          <div>
+            <small id="goal-label">DISTANCE</small
+            ><strong id="goal">0 m</strong>
+          </div>
+          <div><small>SPEED</small><strong id="speed">0</strong></div>
+          <div class="run-progress"><i id="progress"></i></div>
+        </div>
+        <div id="callout" aria-live="polite"></div>
+        <div id="chase" hidden>
+          <b>RIMEHORN</b><span>220 m behind</span
+          ><meter min="0" max="300" value="220"></meter>
+        </div>
+        <section id="panel">
+          <div class="eyebrow">A LITTLE WILD. ALL DOWNHILL.</div>
+          <h1>Rime <em>&</em> Run<span>↘</span></h1>
+          <p class="intro">
+            Carve your own way through the pines.<br />Catch some air. Beat the
+            mountain home.
+          </p>
+          <div class="modes">
+            <button data-mode="slalom" class="selected">
+              <span>01 / RACE</span><b>Pennant pass</b
+              ><small>12 gates. One perfect line.</small></button
+            ><button data-mode="freestyle">
+              <span>02 / STYLE</span><b>Cloud kicker</b
+              ><small>Big air. Bigger combinations.</small></button
+            ><button data-mode="free">
+              <span>03 / ROAM</span><b>Long way home</b
+              ><small>Open snow. A wild finish.</small>
+            </button>
+          </div>
+          <p id="mode-info">
+            Thread the pennants. A missed gate costs 5 seconds. Reach the refuge
+            fast.
+          </p>
+          <button id="start" class="primary">DROP IN <span>↘</span></button>
+          <div class="best" id="best">PERSONAL BEST — 0</div>
+          <details>
+            <summary>Field guide & controls</summary>
+            <p>
+              ← → / A D carve · ↓ / S brake · ↑ / W / Shift tuck<br />Space
+              hops; tap again in air to spin (2 max). Release steering before
+              landing. Trees are too tall to clear; jump rocks.<br />Drag the
+              snow to steer. Touch buttons brake, tuck and hop.<br />P / Esc
+              pauses. Crashes grant a 2.5 second shield.<br />Rimehorn wakes
+              near the finish: tuck above 105 to pull away. Your shield protects
+              the chase gap. Reach the refuge before it catches you!
+            </p>
+          </details>
+        </section>
+        <section id="result" hidden></section>
+        <div id="touch" hidden>
+          <button data-hold="brake">BRAKE</button
+          ><button data-hold="tuck">TUCK ↑</button
+          ><button id="hop">HOP / SPIN</button>
+        </div>
+        <aside class="slope-note">
+          NORTH FACE / 46° N <span>ORIGINAL ALPINE ARCADE</span>
+        </aside>
+      </main>
+      <footer>
+        <span>FRESH TRACKS. NO LIFT TICKET.</span
+        ><span id="footer-help"
+          >Keyboard or touch • Built for a quick escape</span
+        >
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

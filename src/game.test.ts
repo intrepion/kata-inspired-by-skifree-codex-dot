@@ -156,3 +156,19 @@ test("crash shields preserve chase gap during recovery", () => {
   r.advance({ steer: 0, brake: true }, 0.5);
   expect(r.state.gap).toBe(gap);
 });
+test("jump command ignores pause and completed results", () => {
+  const r = new Run("free", 1, []);
+  r.pause();
+  r.jump();
+  expect(r.state.air).toBe(0);
+  r.pause();
+  r.jump();
+  r.jump();
+  expect(r.state.spins).toBe(1);
+  for (let i = 0; i < 30 && r.state.status === "running"; i++)
+    r.advance({ steer: 0, tuck: true }, 1);
+  const state = { ...r.state };
+  r.jump();
+  r.advance({ steer: 1, jump: true }, 1);
+  expect(r.state).toEqual(state);
+});

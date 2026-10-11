@@ -133,8 +133,14 @@ function pause() {
 $("pause").onclick = pause;
 window.addEventListener("keydown", (e) => {
   if (
-    e.target instanceof HTMLInputElement ||
-    (!run && e.target instanceof HTMLButtonElement)
+    !run ||
+    run.state.status === "result" ||
+    e.target instanceof HTMLInputElement
+  )
+    return;
+  if (
+    e.target instanceof HTMLButtonElement &&
+    (e.key === " " || e.key === "Enter")
   )
     return;
   if (
@@ -176,10 +182,7 @@ for (const b of document.querySelectorAll<HTMLButtonElement>("[data-hold]")) {
   };
   b.onpointerup = b.onpointercancel = () => holds.delete(b.dataset.hold!);
 }
-$("hop").onpointerdown = (e) => {
-  e.preventDefault();
-  run?.jump();
-};
+$("hop").onclick = () => run?.jump();
 
 function result() {
   if (!run || finished) return;

@@ -11,3 +11,7 @@ Slalom: pass 12 gates, missed gates add 5s, time bonus at refuge. Freestyle: str
 ## Validation
 `npm test`, `npm run typecheck`, `npm run build`, `npm audit --audit-level=high`.
 See [spec](docs/spec.md), [glossary](CONTEXT.md), [workflow and research](docs/workflow.md), and [QA evidence](docs/qa.md).
+
+## Play online
+
+[Play the hosted game](https://intrepion.github.io/kata-inspired-by-skifree-codex-dot/)

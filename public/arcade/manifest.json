@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "gameId": "kata-inspired-by-skifree-codex-dot",
   "playUrl": "https://intrepion.github.io/kata-inspired-by-skifree-codex-dot/",
   "screenshots": [
@@ -23,6 +23,46 @@
         "sourcePath": "docs/screenshots/freestyle.jpg",
         "deployedBuild": null,
         "captureDate": null
+      }
+    },
+    {
+      "path": "arcade/screenshots/ci-20261102-01.jpg",
+      "sha256": "1bf19be4ca47796489686e947b72614c9a902a3731f47ad2795c5c9e10145515",
+      "alt": "Rime & Run gameplay, view 1",
+      "provenance": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261102-01.png",
+        "sourceSha256": "b7e0102239ade40da0a72f405e03c44486510a9d55b1852a95fd14a2532acfb7",
+        "captureCommit": "a96826e8afdd7861ce397193c3eafd95bd6c350b",
+        "workflowRunId": "41411214872",
+        "inputHashes": {
+          "index.html": "c11417df4aa291d6d44e3e34061fa7cd98481bf196df26e570de128aebcb075a",
+          "assets/index-B3jrQLMp.css": "fac689d0c386596dcba2ceb36f8fb04688f65f56067b23394aa67d099fe1ba41",
+          "assets/index-BnpIaFa9.js": "bcc62c6f665586a2538388a6042ef4752eb1e9378d822b6a1024f6d17027f9b6"
+        },
+        "publishedFilesVerifiedAt": "2026-11-02T19:01:20Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261102-record.json",
+        "captureRecordSha256": "21584261c0948350bd537cf173482574cf3335755664f479c72e99f872189d70"
+      }
+    },
+    {
+      "path": "arcade/screenshots/ci-20261102-02.jpg",
+      "sha256": "be6c8d7c9b4b893b2669d6722f9a6b59c2567ee74e91a4fdea03417d814b5cc2",
+      "alt": "Rime & Run gameplay, view 2",
+      "provenance": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261102-02.png",
+        "sourceSha256": "cb1a91c40631c60cdc07f92a8a96b2952d6220de4695c2d22ee84a0648c66010",
+        "captureCommit": "a96826e8afdd7861ce397193c3eafd95bd6c350b",
+        "workflowRunId": "41411214872",
+        "inputHashes": {
+          "index.html": "c11417df4aa291d6d44e3e34061fa7cd98481bf196df26e570de128aebcb075a",
+          "assets/index-B3jrQLMp.css": "fac689d0c386596dcba2ceb36f8fb04688f65f56067b23394aa67d099fe1ba41",
+          "assets/index-BnpIaFa9.js": "bcc62c6f665586a2538388a6042ef4752eb1e9378d822b6a1024f6d17027f9b6"
+        },
+        "publishedFilesVerifiedAt": "2026-11-02T19:01:20Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261102-record.json",
+        "captureRecordSha256": "21584261c0948350bd537cf173482574cf3335755664f479c72e99f872189d70"
       }
     }
   ]
